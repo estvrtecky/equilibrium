@@ -1,0 +1,29 @@
+{
+  "name": "equilibrium.js",
+  "version": "1.0.0",
+  "description": "Front-end framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "sass --watch src/scss:dist/css",
+    "docs-scss": "sassdoc src/scss --dest docs/scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estvrtecky/equilibrium.git"
+  },
+  "keywords": [
+    "scss",
+    "js"
+  ],
+  "author": "Erik Štvrtecký",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/estvrtecky/equilibrium/issues"
+  },
+  "homepage": "https://github.com/estvrtecky/equilibrium#readme",
+  "devDependencies": {
+    "sass": "^1.77.3",
+    "sassdoc": "^2.7.4"
+  }
+}

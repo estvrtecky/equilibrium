@@ -1,0 +1,14 @@
+/// Map of breakpoints for responsive design.
+/// Each breakpoint is defined by a name and a value in pixels.
+/// The values are the minimum viewport widths at which that breakpoint applies.
+///
+/// @type Map
+///
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
