@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss": "sass --watch src/scss:dist/css",
-    "docs-scss": "sassdoc src/scss --dest docs/scss"
+    "build": "npm run scss-compile",
+    "scss-compile": "sass src/scss:dist/css",
+    "scss-docs": "sassdoc src/scss --dest docs/scss",
+    "scss-watch": "sass --watch src/scss:dist/css"
   },
   "repository": {
     "type": "git",
