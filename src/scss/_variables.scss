@@ -1,3 +1,5 @@
+// Breakpoints
+
 /// Map of breakpoints for responsive design.
 /// Each breakpoint is defined by a name and a value in pixels.
 /// The values are the minimum viewport widths at which that breakpoint applies.
@@ -12,3 +14,22 @@ $breakpoints: (
   xl: 1200px,
   xxl: 1400px
 ) !default;
+
+// Typography
+
+$font-family-sans-serif: Roboto, Arial, Helvetica, sans-serif !default;
+$font-family-monospace: Consolas, "Courier New", Courier, monospace !default;
+
+$font-size-base: 1rem !default; // Browser default font size (16px in most browsers)
+
+$font-weight-thin: 100 !default;
+$font-weight-extra-light: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extra-bold: 800 !default;
+$font-weight-black: 900 !default;
+
+$line-height-base: 1.5 !default;
