@@ -1,3 +1,11 @@
+:root {
+  --eq-font-family-base: Roboto, Arial, Helvetica, sans-serif;
+  --eq-font-family-code: Consolas, "Courier New", Courier, monospace;
+  --eq-font-size-base: 1rem;
+  --eq-font-weight-base: 400;
+  --eq-line-height-base: 1.5;
+}
+
 /* Set up a box model on the root element */
 html {
   box-sizing: border-box;
