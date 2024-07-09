@@ -1,0 +1,56 @@
+// This file contains all the base styles.
+// -----------------------------------------------------------------------------
+
+// Body
+
+body {
+  font-family: var(--eq-font-family-base);
+  font-size: var(--eq-font-size-base);
+  font-weight: var(--eq-font-weight-base);
+  line-height: var(--eq-line-height-base);
+}
+
+// Headings
+
+h1 {
+  font-size: #{$h1-font-size};
+}
+
+h2 {
+  font-size: #{$h2-font-size};
+}
+
+h3 {
+  font-size: #{$h3-font-size};
+}
+
+h4 {
+  font-size: #{$h4-font-size};
+}
+
+h5 {
+  font-size: #{$h5-font-size};
+}
+
+h6 {
+  font-size: #{$h6-font-size};
+}
+
+// Code
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--eq-font-family-code);
+}
+
+kbd {
+  font-size: $font-size-smaller;
+}
+
+// Small
+
+small {
+  font-size: $font-size-smaller;
+}
