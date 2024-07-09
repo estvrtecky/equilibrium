@@ -1,0 +1,10 @@
+// This file is used to define the global (root) CSS variables.
+// -----------------------------------------------------------------------------
+
+:root {
+  --#{$prefix}font-family-base: #{inspect($font-family-sans-serif)};
+  --#{$prefix}font-family-code: #{inspect($font-family-monospace)};
+  --#{$prefix}font-size-base: #{$font-size-base};
+  --#{$prefix}font-weight-base: #{$font-weight-normal};
+  --#{$prefix}line-height-base: #{$line-height-base};
+}

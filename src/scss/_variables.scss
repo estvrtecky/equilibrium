@@ -1,3 +1,9 @@
+// Equilibrium prefix for :root CSS variables
+
+$prefix: eq- !default;
+
+// Breakpoints
+
 /// Map of breakpoints for responsive design.
 /// Each breakpoint is defined by a name and a value in pixels.
 /// The values are the minimum viewport widths at which that breakpoint applies.
@@ -12,3 +18,35 @@ $breakpoints: (
   xl: 1200px,
   xxl: 1400px
 ) !default;
+
+// Typography
+
+$font-family-sans-serif: Roboto, Arial, Helvetica, sans-serif !default;
+$font-family-monospace: Consolas, "Courier New", Courier, monospace !default;
+
+$font-size-base: 1rem !default; // Browser default font size (16px in most browsers)
+$font-size-sm: $font-size-base * 0.75 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-smaller: 0.75em !default; // 75% of the parent element's font size
+$font-size-larger: 1.25em !default; // 125% of the parent element's font size
+
+$font-weight-thin: 100 !default;
+$font-weight-extra-light: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extra-bold: 800 !default;
+$font-weight-black: 900 !default;
+
+$line-height-base: 1.5 !default;
+
+// Headings
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;

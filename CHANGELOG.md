@@ -1,5 +1,11 @@
 # Equilibrium Changelog
 
+## 0.2.0 (09.07.2024)
+
+### Added
+- Typography variables and :root CSS variables
+- Basic typography styles
+
 ## 0.1.0 (09.06.2024)
 
 ### Added
