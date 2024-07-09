@@ -36,9 +36,21 @@ h6 {
   font-size: #{$h6-font-size};
 }
 
+// Code
+
 code,
 kbd,
 pre,
 samp {
   font-family: var(--eq-font-family-code);
+}
+
+kbd {
+  font-size: $font-size-smaller;
+}
+
+// Small
+
+small {
+  font-size: $font-size-smaller;
 }

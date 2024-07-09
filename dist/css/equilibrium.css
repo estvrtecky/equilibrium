@@ -72,4 +72,12 @@ samp {
   font-family: var(--eq-font-family-code);
 }
 
+kbd {
+  font-size: 0.75em;
+}
+
+small {
+  font-size: 0.75em;
+}
+
 /*# sourceMappingURL=equilibrium.css.map */
