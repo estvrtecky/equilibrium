@@ -87,13 +87,48 @@ small {
   padding: 1rem 2rem;
 }
 
-.navbar-brand {
+.navbar-logo {
+  display: flex;
   font-size: 1.5rem;
+}
+@media (min-width: 992px) {
+  .navbar-logo {
+    flex: 1 1 0%;
+  }
 }
 
 .navbar-nav {
+  display: none;
+}
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.navbar-extras {
+  display: none;
+}
+@media (min-width: 992px) {
+  .navbar-extras {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+  }
+}
+
+.navbar-menu-toggle {
   display: flex;
-  gap: 2rem;
+  border: none;
+  font-size: 1.25rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .navbar-menu-toggle {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=equilibrium.css.map */

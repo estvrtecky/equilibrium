@@ -5,7 +5,7 @@
 /// @param {String} $name - The name of the breakpoint.
 /// @content - Styles that are applied for the specified breakpoint and larger.
 ///
-@mixin media-breakpoint-up($name) {
+@mixin breakpoint($name) {
   @media (min-width: map-get($breakpoints, $name)) {
     @content;
   }

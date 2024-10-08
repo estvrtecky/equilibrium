@@ -5,14 +5,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: $navbar-padding-y $navbar-padding-x;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
+.navbar-logo {
+  display: flex;
+  font-size: $logo-font-size;
+
+  @include breakpoint(lg) {
+    flex: 1 1 0%;
+  }
 }
 
 .navbar-nav {
+  display: none;
+
+  @include breakpoint(lg) {
+    display: flex;
+    gap: $nav-gap;
+  }
+}
+
+.navbar-extras {
+  display: none;
+
+  @include breakpoint(lg) {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+  }
+}
+
+.navbar-menu-toggle {
   display: flex;
-  gap: 2rem;
+  border: none;
+  font-size: $toggle-font-size;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include breakpoint(lg) {
+    display: none;
+  }
 }
