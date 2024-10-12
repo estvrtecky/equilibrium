@@ -1,0 +1,78 @@
+// File: src\scss\utilities\_flex.scss
+// Description: Flexbox utility classes
+
+.flex {
+  @include flex-container;
+}
+
+.flex-row {
+  @include flex-container($direction: row);
+}
+
+.flex-row-reverse {
+  @include flex-container($direction: row-reverse);
+}
+
+.flex-col {
+  @include flex-container($direction: column);
+}
+
+.flex-col-reverse {
+  @include flex-container($direction: column-reverse);
+}
+
+.flex-wrap {
+  @include flex-container($wrap: wrap);
+}
+
+.flex-wrap-reverse {
+  @include flex-container($wrap: wrap-reverse);
+}
+
+.flex-nowrap {
+  @include flex-container($wrap: nowrap);
+}
+
+.justify-start {
+  @include flex-container($justify: flex-start);
+}
+
+.justify-end {
+  @include flex-container($justify: flex-end);
+}
+
+.justify-center {
+  @include flex-container($justify: center);
+}
+
+.justify-between {
+  @include flex-container($justify: space-between);
+}
+
+.justify-around {
+  @include flex-container($justify: space-around);
+}
+
+.justify-evenly {
+  @include flex-container($justify: space-evenly);
+}
+
+.align-start {
+  @include flex-container($align: flex-start);
+}
+
+.align-end {
+  @include flex-container($align: flex-end);
+}
+
+.align-center {
+  @include flex-container($align: center);
+}
+
+.align-baseline {
+  @include flex-container($align: baseline);
+}
+
+.align-stretch {
+  @include flex-container($align: stretch);
+}

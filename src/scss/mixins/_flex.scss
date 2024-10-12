@@ -1,0 +1,42 @@
+// File: src\scss\mixins\_flex.scss
+// Description: Flexbox utility mixins
+
+@mixin flex-container(
+  $direction: null,
+  $wrap: null,
+  $justify: null,
+  $align: null,
+  $is_component: false
+) {
+  // Sets display: flex if no properties are provided or if it's a component
+  @if (not $direction and not $wrap and not $justify and not $align) or
+    $is_component
+  {
+    display: flex;
+  }
+
+  // Applies flex-flow property if both $direction and $wrap are provided
+  @if $direction and $wrap {
+    flex-flow: $direction $wrap;
+  } @else {
+    // Applies flex-direction property if $direction is provided
+    @if $direction {
+      flex-direction: $direction;
+    }
+
+    // Applies flex-wrap property if $wrap is provided
+    @if $wrap {
+      flex-wrap: $wrap;
+    }
+  }
+
+  // Applies justify-content property if $justify is provided
+  @if $justify {
+    justify-content: $justify;
+  }
+
+  // Applies align-items property if $align is provided
+  @if $align {
+    align-items: $align;
+  }
+}

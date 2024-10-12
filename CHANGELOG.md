@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Responsive navbar component
 - Responsive menu component
 - equilibrium.js file for all JavaScript scripts
+- `flex-container` mixin for easy flex container creation
+- Flex utility classes
 
 ### Changed
 
