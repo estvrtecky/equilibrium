@@ -131,4 +131,38 @@ small {
   }
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: clamp(250px, 50%, 350px);
+  background-color: #fff;
+}
+.menu.show {
+  display: flex;
+}
+.menu.left {
+  left: 0;
+  border-right: 1px solid #808080;
+}
+.menu.right {
+  right: 0;
+  border-left: 1px solid #808080;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.menu-main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
 /*# sourceMappingURL=equilibrium.css.map */

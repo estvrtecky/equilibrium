@@ -1,0 +1,39 @@
+// File: src\scss\components\_menu.scss
+// Description: Menu component styles
+
+.menu {
+  position: fixed;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: clamp(250px, 50%, 350px);
+  background-color: $white;
+
+  &.show {
+    display: flex;
+  }
+
+  &.left {
+    left: 0;
+    border-right: 1px solid $gray-500;
+  }
+
+  &.right {
+    right: 0;
+    border-left: 1px solid $gray-500;
+  }
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing;
+}
+
+.menu-main {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing;
+}

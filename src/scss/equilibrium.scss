@@ -1,14 +1,14 @@
 // Abstracts
-@import 'variables';
+@import "variables";
 
 // Mixins
-@import 'breakpoints';
+@import "breakpoints";
 
 // Base
-@import
-  'root',
-  'reset',
-  'base';
+@import "root";
+@import "reset";
+@import "base";
 
 // Components
-@import 'components/navbar';
+@import "components/navbar";
+@import "components/menu";
