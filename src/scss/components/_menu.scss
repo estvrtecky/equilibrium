@@ -5,13 +5,12 @@
   position: fixed;
   top: 0;
   display: none;
-  flex-direction: column;
   height: 100%;
   width: clamp(250px, 50%, 350px);
   background-color: $white;
 
   &.show {
-    display: flex;
+    @include flex-container($direction: column);
   }
 
   &.left {
@@ -26,14 +25,11 @@
 }
 
 .menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-container($justify: space-between, $align: center);
   padding: $spacing;
 }
 
 .menu-main {
-  display: flex;
-  flex-direction: column;
+  @include flex-container($direction: column);
   padding: $spacing;
 }

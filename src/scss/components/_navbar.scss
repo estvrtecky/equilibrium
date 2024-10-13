@@ -2,14 +2,12 @@
 // Description: Navigation bar component styles
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-container($justify: space-between, $align: center);
   padding: $navbar-padding-y $navbar-padding-x;
 }
 
 .navbar-logo {
-  display: flex;
+  @include flex-container;
   font-size: $logo-font-size;
 
   @include breakpoint(lg) {
@@ -21,7 +19,7 @@
   display: none;
 
   @include breakpoint(lg) {
-    display: flex;
+    @include flex-container($align: center);
     gap: $nav-gap;
   }
 }
@@ -30,14 +28,13 @@
   display: none;
 
   @include breakpoint(lg) {
-    display: flex;
+    @include flex-container($justify: flex-end);
     flex: 1 1 0%;
-    justify-content: flex-end;
   }
 }
 
 .navbar-menu-toggle {
-  display: flex;
+  @include flex-container;
   border: none;
   font-size: $toggle-font-size;
   background-color: transparent;

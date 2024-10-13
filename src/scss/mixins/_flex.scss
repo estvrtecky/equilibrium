@@ -6,7 +6,7 @@
   $wrap: null,
   $justify: null,
   $align: null,
-  $is_component: false
+  $is_component: true
 ) {
   // Sets display: flex if no properties are provided or if it's a component
   @if (not $direction and not $wrap and not $justify and not $align) or

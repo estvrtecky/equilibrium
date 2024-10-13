@@ -179,6 +179,7 @@ small {
 @media (min-width: 992px) {
   .navbar-nav {
     display: flex;
+    align-items: center;
     gap: 2rem;
   }
 }
@@ -189,8 +190,8 @@ small {
 @media (min-width: 992px) {
   .navbar-extras {
     display: flex;
-    flex: 1 1 0%;
     justify-content: flex-end;
+    flex: 1 1 0%;
   }
 }
 
@@ -211,13 +212,13 @@ small {
   position: fixed;
   top: 0;
   display: none;
-  flex-direction: column;
   height: 100%;
   width: clamp(250px, 50%, 350px);
   background-color: #fff;
 }
 .menu.show {
   display: flex;
+  flex-direction: column;
 }
 .menu.left {
   left: 0;
