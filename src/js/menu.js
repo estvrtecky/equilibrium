@@ -1,5 +1,5 @@
 // File: src/js/menu.js
-// Description: Menu toggle functionality
+// Description: Menu component functionality.
 
 class Menu {
   constructor() {

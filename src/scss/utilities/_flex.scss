@@ -1,5 +1,5 @@
-// File: src\scss\utilities\_flex.scss
-// Description: Flexbox utility classes
+// File: src/scss/utilities/_flex.scss
+// Description: Flexbox utility classes.
 
 .flex {
   @include flex-container($is_component: false);

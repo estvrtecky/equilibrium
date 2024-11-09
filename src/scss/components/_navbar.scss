@@ -1,5 +1,5 @@
-// File: src\scss\components\_navbar.scss
-// Description: Navigation bar component styles
+// File: src/scss/components/_navbar.scss
+// Description: Navigation bar component styles.
 
 .navbar {
   @include flex-container($justify: space-between, $align: center);
