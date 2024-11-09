@@ -2,7 +2,7 @@
   "name": "equilibrium.js",
   "version": "0.2.0",
   "description": "Front-end framework",
-  "main": "index.js",
+  "module": "dist/js/equilibrium.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run scss-compile && npm run js-compile",
@@ -26,6 +26,9 @@
   },
   "homepage": "https://github.com/estvrtecky/equilibrium#readme",
   "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "babel-loader": "^9.2.1",
     "sass": "^1.77.3",
     "sassdoc": "^2.7.4",
     "webpack": "^5.95.0",
