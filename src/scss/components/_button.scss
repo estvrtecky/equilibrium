@@ -1,0 +1,19 @@
+// File: src/scss/components/_button.scss
+// Description: Button component styles.
+
+.btn {
+  display: inline-block;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
