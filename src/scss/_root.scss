@@ -1,5 +1,5 @@
-// This file is used to define the global (root) CSS variables.
-// -----------------------------------------------------------------------------
+// File: src/scss/_root.scss
+// Description: This file is used to define the global (root) CSS variables.
 
 :root {
   --#{$prefix}font-family-base: #{inspect($font-family-sans-serif)};
