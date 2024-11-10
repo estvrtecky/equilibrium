@@ -8,9 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- Basic colors
 - Spacing variable
 - Responsive navbar component
 - Responsive menu component
+- Button component
 - equilibrium.js file for all JavaScript scripts
 - `flex-container` mixin for easy flex container creation
 - Flex utility classes

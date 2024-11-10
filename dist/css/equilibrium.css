@@ -156,6 +156,22 @@ small {
   font-size: 0.75em;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -222,11 +238,11 @@ small {
 }
 .menu.left {
   left: 0;
-  border-right: 1px solid #808080;
+  border-right: 1px solid #888;
 }
 .menu.right {
   right: 0;
-  border-left: 1px solid #808080;
+  border-left: 1px solid #888;
 }
 
 .menu-header {
