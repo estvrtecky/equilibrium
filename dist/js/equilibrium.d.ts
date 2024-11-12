@@ -1,6 +1,6 @@
 // File: dist/js/equilibrium.d.js
 
-declare module "equilibrium" {
+declare module "equilibrium.js" {
   export class Menu {
     constructor();
   }
