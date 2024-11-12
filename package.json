@@ -1,6 +1,6 @@
 {
   "name": "equilibrium.js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Front-end framework",
   "main": "dist/js/equilibrium.js",
   "module": "dist/js/equilibrium.js",
