@@ -2,8 +2,10 @@
   "name": "equilibrium.js",
   "version": "0.3.0",
   "description": "Front-end framework",
+  "main": "dist/js/equilibrium.js",
   "module": "dist/js/equilibrium.js",
   "types": "dist/js/equilibrium.d.ts",
+  "style": "dist/css/equilibrium.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run scss-compile && npm run js-compile",
