@@ -64,12 +64,16 @@ $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
 // Components
+
+// Breadcrumb
+$breadcrumb-divider: "/" !default;
+$breadcrumb-margin-x: $spacing * 0.5 !default;
+
 // Button
 $btn-padding-y: 0.5rem !default;
 $btn-padding-x: 1rem !default;
 
 // Navbar
-
 $navbar-padding-y: $spacing !default;
 $navbar-padding-x: $spacing * 2 !default;
 
