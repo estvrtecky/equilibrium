@@ -156,6 +156,15 @@ small {
   font-size: 0.75em;
 }
 
+.breadcrumb {
+  display: flex;
+}
+
+.breadcrumb-item:not(:first-child)::before {
+  content: "/";
+  margin: 0 0.5rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
