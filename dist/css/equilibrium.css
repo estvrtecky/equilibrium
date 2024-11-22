@@ -181,6 +181,30 @@ small {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.btn-primary {
+  background-color: #000;
+}
+
+.btn-secondary {
+  background-color: #888;
+}
+
+.btn-danger {
+  background-color: #e63946;
+}
+
+.btn-warning {
+  background-color: #ffd60a;
+}
+
+.btn-success {
+  background-color: #2dc653;
+}
+
+.btn-info {
+  background-color: #00a8e8;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
