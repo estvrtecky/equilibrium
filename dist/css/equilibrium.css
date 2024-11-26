@@ -183,26 +183,32 @@ small {
 
 .btn-primary {
   background-color: #000;
+  color: #fff;
 }
 
 .btn-secondary {
   background-color: #888;
+  color: #000;
 }
 
 .btn-danger {
   background-color: #e63946;
+  color: #000;
 }
 
 .btn-warning {
   background-color: #ffd60a;
+  color: #000;
 }
 
 .btn-success {
   background-color: #2dc653;
+  color: #000;
 }
 
 .btn-info {
   background-color: #00a8e8;
+  color: #000;
 }
 
 .navbar {
