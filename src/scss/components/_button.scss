@@ -22,5 +22,9 @@
   .btn-#{$name} {
     background-color: $color;
     color: color-contrast($color);
+
+    &:hover {
+      background-color: color-tint($color, 10%);
+    }
   }
 }

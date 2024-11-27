@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 
 - Breadcrumb component styles
+- Theme colors
+- Button variants
 
 ## [0.3.2] - 2024-11-12
 

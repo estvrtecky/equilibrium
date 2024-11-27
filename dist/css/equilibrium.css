@@ -185,30 +185,48 @@ small {
   background-color: #000;
   color: #fff;
 }
+.btn-primary:hover {
+  background-color: #1a1a1a;
+}
 
 .btn-secondary {
   background-color: #888;
   color: #000;
+}
+.btn-secondary:hover {
+  background-color: #949494;
 }
 
 .btn-danger {
   background-color: #e63946;
   color: #000;
 }
+.btn-danger:hover {
+  background-color: #e94d59;
+}
 
 .btn-warning {
   background-color: #ffd60a;
   color: #000;
+}
+.btn-warning:hover {
+  background-color: #ffda23;
 }
 
 .btn-success {
   background-color: #2dc653;
   color: #000;
 }
+.btn-success:hover {
+  background-color: #42cc64;
+}
 
 .btn-info {
   background-color: #00a8e8;
   color: #000;
+}
+.btn-info:hover {
+  background-color: #1ab1ea;
 }
 
 .navbar {
