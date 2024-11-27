@@ -17,3 +17,14 @@
     background-color: rgba(0, 0, 0, 0.1);
   }
 }
+
+@each $name, $color in $theme-colors {
+  .btn-#{$name} {
+    background-color: $color;
+    color: color-contrast($color);
+
+    &:hover {
+      background-color: color-tint($color, 10%);
+    }
+  }
+}

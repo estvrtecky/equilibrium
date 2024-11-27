@@ -6,9 +6,27 @@
 $prefix: eq- !default;
 
 // Colors
+$min-contrast-ratio: 4.5 !default;
+
 $white: #fff !default;
 $gray-500: #888 !default;
 $black: #000 !default;
+
+$primary: $black !default;
+$secondary: $gray-500 !default;
+$danger: #e63946 !default;
+$warning: #ffd60a !default;
+$success: #2dc653 !default;
+$info: #00a8e8 !default;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  danger: $danger,
+  warning: $warning,
+  success: $success,
+  info: $info,
+) !default;
 
 // Breakpoints
 
