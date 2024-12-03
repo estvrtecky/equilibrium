@@ -10,9 +10,10 @@
 @import "utilities/flex";
 
 // Base
-@import "root";
-@import "reset";
-@import "base";
+@import "base/root";
+@import "base/reset";
+@import "base/base";
+@import "base/container";
 
 // Components
 @import "components/breadcrumb";

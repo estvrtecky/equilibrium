@@ -2,7 +2,6 @@
 // Description: All Equilibrium CSS variables.
 
 // Equilibrium prefix for :root CSS variables
-
 $prefix: eq- !default;
 
 // Colors
@@ -28,6 +27,11 @@ $theme-colors: (
   info: $info,
 ) !default;
 
+// Spacing
+$spacing: 1rem !default;
+
+// Grid System
+
 // Breakpoints
 
 /// Map of breakpoints for responsive design.
@@ -45,9 +49,18 @@ $breakpoints: (
   xxl: 1400px,
 ) !default;
 
-// Spacing
+// Container widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+) !default;
 
-$spacing: 1rem !default;
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter: 1rem !default;
 
 // Typography
 

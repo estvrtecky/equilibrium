@@ -1,6 +1,11 @@
 // File: src/scss/mixins/_breakpoints.scss
 // Description: Breakpoints and media queries.
 
+@function breakpoint-infix($name, $breakpoints: $breakpoints) {
+  $breakpoint: map-get($breakpoints, $name);
+  @return if($breakpoint == 0, null, "-" + $name);
+}
+
 /// Media of the specified breakpoint and larger.
 ///
 /// @param {String} $name - The name of the breakpoint.
