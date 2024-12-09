@@ -1,0 +1,32 @@
+// File: src/scss/base/_grid.scss
+// Description: Grid styles.
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc($grid-gutter * -0.5);
+
+  & > * {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 $grid-gutter * 0.5;
+  }
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    max-width: calc(100% / #{$grid-columns} * #{$i});
+  }
+}
+
+@for $i from 1 through ($grid-columns - 1) {
+  .offset-#{$i} {
+    margin-left: calc(100% / #{$grid-columns} * #{$i});
+  }
+}
