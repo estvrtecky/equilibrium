@@ -1,0 +1,42 @@
+// File: src/scss/base/_grid.scss
+// Description: Grid styles.
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc($grid-gutter * -0.5);
+
+  & > * {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 $grid-gutter * 0.5;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  $infix: breakpoint-infix($breakpoint);
+
+  @include breakpoint($breakpoint) {
+    .col#{$infix} {
+      flex: 1 0 0;
+    }
+
+    .col#{$infix}-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col#{$infix}-#{$i} {
+        flex: 0 0 auto;
+        max-width: calc(100% / #{$grid-columns} * #{$i});
+      }
+    }
+
+    @for $i from 1 through ($grid-columns - 1) {
+      .offset#{$infix}-#{$i} {
+        margin-left: calc(100% / #{$grid-columns} * #{$i});
+      }
+    }
+  }
+}
