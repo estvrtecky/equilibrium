@@ -1,4 +1,5 @@
 // Abstracts
+@import "functions";
 @import "variables";
 
 // Mixins
@@ -9,11 +10,14 @@
 @import "utilities/flex";
 
 // Base
-@import "root";
-@import "reset";
-@import "base";
+@import "base/root";
+@import "base/reset";
+@import "base/base";
+@import "base/container";
+@import "base/grid";
 
 // Components
+@import "components/breadcrumb";
 @import "components/button";
 @import "components/navbar";
 @import "components/menu";

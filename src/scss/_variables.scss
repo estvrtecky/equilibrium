@@ -2,13 +2,35 @@
 // Description: All Equilibrium CSS variables.
 
 // Equilibrium prefix for :root CSS variables
-
 $prefix: eq- !default;
 
 // Colors
+$min-contrast-ratio: 4.5 !default;
+
 $white: #fff !default;
 $gray-500: #888 !default;
 $black: #000 !default;
+
+$primary: $black !default;
+$secondary: $gray-500 !default;
+$danger: #e63946 !default;
+$warning: #ffd60a !default;
+$success: #2dc653 !default;
+$info: #00a8e8 !default;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  danger: $danger,
+  warning: $warning,
+  success: $success,
+  info: $info,
+) !default;
+
+// Spacing
+$spacing: 1rem !default;
+
+// Grid System
 
 // Breakpoints
 
@@ -27,9 +49,18 @@ $breakpoints: (
   xxl: 1400px,
 ) !default;
 
-// Spacing
+// Container widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+) !default;
 
-$spacing: 1rem !default;
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter: 1rem !default;
 
 // Typography
 
@@ -64,12 +95,16 @@ $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
 // Components
+
+// Breadcrumb
+$breadcrumb-divider: "/" !default;
+$breadcrumb-margin-x: $spacing * 0.5 !default;
+
 // Button
 $btn-padding-y: 0.5rem !default;
 $btn-padding-x: 1rem !default;
 
 // Navbar
-
 $navbar-padding-y: $spacing !default;
 $navbar-padding-x: $spacing * 2 !default;
 
