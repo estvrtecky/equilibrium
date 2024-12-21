@@ -7,4 +7,5 @@
   --#{$prefix}font-size-base: #{$font-size-base};
   --#{$prefix}font-weight-base: #{$font-weight-normal};
   --#{$prefix}line-height-base: #{$line-height-base};
+  --#{$prefix}headings-font-family: var(--#{$prefix}font-family-base);
 }

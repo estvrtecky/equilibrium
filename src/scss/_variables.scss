@@ -86,13 +86,17 @@ $font-weight-black: 900 !default;
 $line-height-base: 1.5 !default;
 
 // Headings
-
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: $font-size-base * 2 !default;
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
+
+$headings-font-weight: $font-weight-bold !default;
+$headings-font-family: var(--#{$prefix}headings-font-family) !default;
+$headings-line-height: 1.2 !default;
+$headings-margin-bottom: $spacing * 0.5 !default;
 
 // Components
 
