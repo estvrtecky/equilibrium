@@ -860,11 +860,11 @@ small {
 }
 
 .btn-warning {
-  background-color: #ffd60a;
+  background-color: #ffee32;
   color: #000;
 }
 .btn-warning:hover {
-  background-color: #ffda23;
+  background-color: #fff047;
 }
 
 .btn-success {
