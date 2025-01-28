@@ -1,11 +1,25 @@
 // File: src/scss/base/_root.scss
 // Description: This file is used to define the global (root) CSS variables.
 
-:root {
+// Root CSS variables and light mode colors
+:root,
+[data-eq-theme="light"] {
+  color-scheme: light;
+
   --#{$prefix}font-family-base: #{inspect($font-family-sans-serif)};
   --#{$prefix}font-family-code: #{inspect($font-family-monospace)};
   --#{$prefix}font-size-base: #{$font-size-base};
   --#{$prefix}font-weight-base: #{$font-weight-normal};
   --#{$prefix}line-height-base: #{$line-height-base};
   --#{$prefix}headings-font-family: var(--#{$prefix}font-family-base);
+  --#{$prefix}text-color: #{$text-color};
+  --#{$prefix}bg-color: #{$bg-color};
+}
+
+// Dark mode colors
+[data-eq-theme="dark"] {
+  color-scheme: dark;
+
+  --#{$prefix}text-color: #{$text-color-dark};
+  --#{$prefix}bg-color: #{$bg-color-dark};
 }

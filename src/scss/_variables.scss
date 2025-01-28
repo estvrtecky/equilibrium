@@ -8,7 +8,15 @@ $prefix: eq- !default;
 $min-contrast-ratio: 4.5 !default;
 
 $white: #fff !default;
-$gray-500: #888 !default;
+$gray-100: color-shade($white, 5%) !default;
+$gray-200: color-shade($white, 10%) !default;
+$gray-300: color-shade($white, 25%) !default;
+$gray-400: color-shade($white, 30%) !default;
+$gray-500: color-shade($white, 40%) !default;
+$gray-600: color-shade($white, 60%) !default;
+$gray-700: color-shade($white, 70%) !default;
+$gray-800: color-shade($white, 85%) !default;
+$gray-900: color-shade($white, 91%) !default;
 $black: #000 !default;
 
 $primary: $black !default;
@@ -29,6 +37,12 @@ $theme-colors: (
 
 // Spacing
 $spacing: 1rem !default;
+
+// Body
+$text-color: $black !default;
+$text-color-dark: $white !default;
+$bg-color: $white !default;
+$bg-color-dark: $gray-900 !default;
 
 // Grid System
 
