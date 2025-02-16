@@ -82,15 +82,17 @@
   --eq-font-size-base: 1rem;
   --eq-font-weight-base: 400;
   --eq-line-height-base: 1.5;
-  --eq-headings-font-family: var(--eq-font-family-base);
   --eq-text-color: #000;
   --eq-bg-color: #fff;
+  --eq-headings-font-family: var(--eq-font-family-base);
+  --eq-headings-color: var(--eq-text-color);
 }
 
 [data-eq-theme=dark] {
   color-scheme: dark;
   --eq-text-color: #fff;
   --eq-bg-color: #171717;
+  --eq-headings-color: var(--eq-text-color);
 }
 
 /* Set up a box model on the root element */
@@ -137,6 +139,7 @@ h1,
   font-weight: 700;
   font-family: var(--eq-headings-font-family);
   line-height: 1.2;
+  color: var(--eq-headings-color);
   margin-bottom: 0.5rem;
 }
 
@@ -146,6 +149,7 @@ h2,
   font-weight: 700;
   font-family: var(--eq-headings-font-family);
   line-height: 1.2;
+  color: var(--eq-headings-color);
   margin-bottom: 0.5rem;
 }
 
@@ -155,6 +159,7 @@ h3,
   font-weight: 700;
   font-family: var(--eq-headings-font-family);
   line-height: 1.2;
+  color: var(--eq-headings-color);
   margin-bottom: 0.5rem;
 }
 
@@ -164,6 +169,7 @@ h4,
   font-weight: 700;
   font-family: var(--eq-headings-font-family);
   line-height: 1.2;
+  color: var(--eq-headings-color);
   margin-bottom: 0.5rem;
 }
 
@@ -173,6 +179,7 @@ h5,
   font-weight: 700;
   font-family: var(--eq-headings-font-family);
   line-height: 1.2;
+  color: var(--eq-headings-color);
   margin-bottom: 0.5rem;
 }
 
@@ -182,6 +189,7 @@ h6,
   font-weight: 700;
   font-family: var(--eq-headings-font-family);
   line-height: 1.2;
+  color: var(--eq-headings-color);
   margin-bottom: 0.5rem;
 }
 

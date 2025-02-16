@@ -11,9 +11,12 @@
   --#{$prefix}font-size-base: #{$font-size-base};
   --#{$prefix}font-weight-base: #{$font-weight-normal};
   --#{$prefix}line-height-base: #{$line-height-base};
-  --#{$prefix}headings-font-family: var(--#{$prefix}font-family-base);
   --#{$prefix}text-color: #{$text-color};
   --#{$prefix}bg-color: #{$bg-color};
+
+  // Headings
+  --#{$prefix}headings-font-family: var(--#{$prefix}font-family-base);
+  --#{$prefix}headings-color: var(--#{$prefix}text-color);
 }
 
 // Dark mode colors
@@ -22,4 +25,5 @@
 
   --#{$prefix}text-color: #{$text-color-dark};
   --#{$prefix}bg-color: #{$bg-color-dark};
+  --#{$prefix}headings-color: var(--#{$prefix}text-color);
 }
