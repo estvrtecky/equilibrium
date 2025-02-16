@@ -1,15 +1,16 @@
 // File: src/scss/base/_base.scss
 // Description: This file contains all the base styles.
 
-// Body
+// Body & Theme
 
-body {
-  font-family: var(--eq-font-family-base);
-  font-size: var(--eq-font-size-base);
-  font-weight: var(--eq-font-weight-base);
-  line-height: var(--eq-line-height-base);
-  color: var(--eq-text-color);
-  background-color: var(--eq-bg-color);
+body,
+[data-eq-theme] {
+  font-family: var(--#{$prefix}font-family-base);
+  font-size: var(--#{$prefix}font-size-base);
+  font-weight: var(--#{$prefix}font-weight-base);
+  line-height: var(--#{$prefix}line-height-base);
+  color: var(--#{$prefix}text-color);
+  background-color: var(--#{$prefix}bg-color);
 }
 
 // Headings

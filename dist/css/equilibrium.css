@@ -121,7 +121,8 @@ a {
   color: inherit;
 }
 
-body {
+body,
+[data-eq-theme] {
   font-family: var(--eq-font-family-base);
   font-size: var(--eq-font-size-base);
   font-weight: var(--eq-font-weight-base);
