@@ -834,6 +834,7 @@ small {
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
+  color: var(--eq-text-color);
   background-color: transparent;
   border: none;
   border-radius: 5px;
