@@ -7,16 +7,138 @@ $prefix: eq- !default;
 // Colors
 $min-contrast-ratio: 4.5 !default;
 
+$red: #e63946 !default;
+$yellow: #ffee32 !default;
+$green: #2dc653 !default;
+$blue: #00a8e8 !default;
+
 $white: #fff !default;
-$gray-500: #888 !default;
+$gray-100: color-shade($white, 5%) !default;
+$gray-200: color-shade($white, 10%) !default;
+$gray-300: color-shade($white, 25%) !default;
+$gray-400: color-shade($white, 30%) !default;
+$gray-500: color-shade($white, 40%) !default;
+$gray-600: color-shade($white, 60%) !default;
+$gray-700: color-shade($white, 70%) !default;
+$gray-800: color-shade($white, 85%) !default;
+$gray-900: color-shade($white, 91%) !default;
 $black: #000 !default;
+
+$colors: (
+  red: $red,
+  yellow: $yellow,
+  green: $green,
+  blue: $blue,
+  white: $white,
+  black: $black,
+) !default;
+
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900,
+) !default;
+
+$red-100: color-tint($red, 80%) !default;
+$red-200: color-tint($red, 60%) !default;
+$red-300: color-tint($red, 40%) !default;
+$red-400: color-tint($red, 20%) !default;
+$red-500: $red !default;
+$red-600: color-shade($red, 20%) !default;
+$red-700: color-shade($red, 40%) !default;
+$red-800: color-shade($red, 60%) !default;
+$red-900: color-shade($red, 80%) !default;
+
+$yellow-100: color-tint($yellow, 80%) !default;
+$yellow-200: color-tint($yellow, 60%) !default;
+$yellow-300: color-tint($yellow, 40%) !default;
+$yellow-400: color-tint($yellow, 20%) !default;
+$yellow-500: $yellow !default;
+$yellow-600: color-shade($yellow, 20%) !default;
+$yellow-700: color-shade($yellow, 40%) !default;
+$yellow-800: color-shade($yellow, 60%) !default;
+$yellow-900: color-shade($yellow, 80%) !default;
+
+$green-100: color-tint($green, 80%) !default;
+$green-200: color-tint($green, 60%) !default;
+$green-300: color-tint($green, 40%) !default;
+$green-400: color-tint($green, 20%) !default;
+$green-500: $green !default;
+$green-600: color-shade($green, 20%) !default;
+$green-700: color-shade($green, 40%) !default;
+$green-800: color-shade($green, 60%) !default;
+$green-900: color-shade($green, 80%) !default;
+
+$blue-100: color-tint($blue, 80%) !default;
+$blue-200: color-tint($blue, 60%) !default;
+$blue-300: color-tint($blue, 40%) !default;
+$blue-400: color-tint($blue, 20%) !default;
+$blue-500: $blue !default;
+$blue-600: color-shade($blue, 20%) !default;
+$blue-700: color-shade($blue, 40%) !default;
+$blue-800: color-shade($blue, 60%) !default;
+$blue-900: color-shade($blue, 80%) !default;
+
+$reds: (
+  100: $red-100,
+  200: $red-200,
+  300: $red-300,
+  400: $red-400,
+  500: $red-500,
+  600: $red-600,
+  700: $red-700,
+  800: $red-800,
+  900: $red-900,
+) !default;
+
+$yellows: (
+  100: $yellow-100,
+  200: $yellow-200,
+  300: $yellow-300,
+  400: $yellow-400,
+  500: $yellow-500,
+  600: $yellow-600,
+  700: $yellow-700,
+  800: $yellow-800,
+  900: $yellow-900,
+) !default;
+
+$greens: (
+  100: $green-100,
+  200: $green-200,
+  300: $green-300,
+  400: $green-400,
+  500: $green-500,
+  600: $green-600,
+  700: $green-700,
+  800: $green-800,
+  900: $green-900,
+) !default;
+
+$blues: (
+  100: $blue-100,
+  200: $blue-200,
+  300: $blue-300,
+  400: $blue-400,
+  500: $blue-500,
+  600: $blue-600,
+  700: $blue-700,
+  800: $blue-800,
+  900: $blue-900,
+) !default;
 
 $primary: $black !default;
 $secondary: $gray-500 !default;
-$danger: #e63946 !default;
-$warning: #ffd60a !default;
-$success: #2dc653 !default;
-$info: #00a8e8 !default;
+$danger: $red !default;
+$warning: $yellow !default;
+$success: $green !default;
+$info: $blue !default;
 
 $theme-colors: (
   primary: $primary,
@@ -29,6 +151,12 @@ $theme-colors: (
 
 // Spacing
 $spacing: 1rem !default;
+
+// Body
+$text-color: $black !default;
+$text-color-dark: $white !default;
+$bg-color: $white !default;
+$bg-color-dark: $gray-900 !default;
 
 // Grid System
 
@@ -93,10 +221,11 @@ $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
-$headings-font-weight: $font-weight-bold !default;
-$headings-font-family: var(--#{$prefix}headings-font-family) !default;
-$headings-line-height: 1.2 !default;
 $headings-margin-bottom: $spacing * 0.5 !default;
+$headings-font-family: var(--#{$prefix}headings-font-family) !default;
+$headings-font-weight: $font-weight-bold !default;
+$headings-line-height: 1.2 !default;
+$headings-color: var(--#{$prefix}headings-color) !default;
 
 // Components
 

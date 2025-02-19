@@ -7,6 +7,7 @@
   font-size: $font-size-base;
   line-height: $line-height-base;
   text-align: center;
+  color: var(--#{$prefix}text-color);
   background-color: transparent;
   border: none;
   border-radius: 5px;
