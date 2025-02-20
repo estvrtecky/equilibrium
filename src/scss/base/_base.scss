@@ -1,39 +1,48 @@
 // File: src/scss/base/_base.scss
 // Description: This file contains all the base styles.
 
-// Body
+// Body & Theme
 
-body {
-  font-family: var(--eq-font-family-base);
-  font-size: var(--eq-font-size-base);
-  font-weight: var(--eq-font-weight-base);
-  line-height: var(--eq-line-height-base);
+body,
+[data-eq-theme] {
+  font-family: var(--#{$prefix}font-family-base);
+  font-size: var(--#{$prefix}font-size-base);
+  font-weight: var(--#{$prefix}font-weight-base);
+  line-height: var(--#{$prefix}line-height-base);
+  color: var(--#{$prefix}text-color);
+  background-color: var(--#{$prefix}bg-color);
 }
 
 // Headings
 
-h1 {
-  font-size: #{$h1-font-size};
+h1,
+.h1 {
+  @include heading($h1-font-size);
 }
 
-h2 {
-  font-size: #{$h2-font-size};
+h2,
+.h2 {
+  @include heading($h2-font-size);
 }
 
-h3 {
-  font-size: #{$h3-font-size};
+h3,
+.h3 {
+  @include heading($h3-font-size);
 }
 
-h4 {
-  font-size: #{$h4-font-size};
+h4,
+.h4 {
+  @include heading($h4-font-size);
 }
 
-h5 {
-  font-size: #{$h5-font-size};
+h5,
+.h5 {
+  @include heading($h5-font-size);
 }
 
-h6 {
-  font-size: #{$h6-font-size};
+h6,
+.h6 {
+  @include heading($h6-font-size);
 }
 
 // Code

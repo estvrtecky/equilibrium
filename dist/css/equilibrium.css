@@ -74,12 +74,25 @@
   align-items: stretch;
 }
 
-:root {
+:root,
+[data-eq-theme=light] {
+  color-scheme: light;
   --eq-font-family-base: Roboto, Arial, Helvetica, sans-serif;
   --eq-font-family-code: Consolas, "Courier New", Courier, monospace;
   --eq-font-size-base: 1rem;
   --eq-font-weight-base: 400;
   --eq-line-height-base: 1.5;
+  --eq-text-color: #000;
+  --eq-bg-color: #fff;
+  --eq-headings-font-family: var(--eq-font-family-base);
+  --eq-headings-color: var(--eq-text-color);
+}
+
+[data-eq-theme=dark] {
+  color-scheme: dark;
+  --eq-text-color: #fff;
+  --eq-bg-color: #171717;
+  --eq-headings-color: var(--eq-text-color);
 }
 
 /* Set up a box model on the root element */
@@ -110,35 +123,74 @@ a {
   color: inherit;
 }
 
-body {
+body,
+[data-eq-theme] {
   font-family: var(--eq-font-family-base);
   font-size: var(--eq-font-size-base);
   font-weight: var(--eq-font-weight-base);
   line-height: var(--eq-line-height-base);
+  color: var(--eq-text-color);
+  background-color: var(--eq-bg-color);
 }
 
-h1 {
+h1,
+.h1 {
   font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--eq-headings-font-family);
+  line-height: 1.2;
+  color: var(--eq-headings-color);
+  margin-bottom: 0.5rem;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--eq-headings-font-family);
+  line-height: 1.2;
+  color: var(--eq-headings-color);
+  margin-bottom: 0.5rem;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: 1.75rem;
+  font-weight: 700;
+  font-family: var(--eq-headings-font-family);
+  line-height: 1.2;
+  color: var(--eq-headings-color);
+  margin-bottom: 0.5rem;
 }
 
-h4 {
+h4,
+.h4 {
   font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--eq-headings-font-family);
+  line-height: 1.2;
+  color: var(--eq-headings-color);
+  margin-bottom: 0.5rem;
 }
 
-h5 {
+h5,
+.h5 {
   font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--eq-headings-font-family);
+  line-height: 1.2;
+  color: var(--eq-headings-color);
+  margin-bottom: 0.5rem;
 }
 
-h6 {
+h6,
+.h6 {
   font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--eq-headings-font-family);
+  line-height: 1.2;
+  color: var(--eq-headings-color);
+  margin-bottom: 0.5rem;
 }
 
 code,
@@ -782,6 +834,7 @@ small {
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
+  color: var(--eq-text-color);
   background-color: transparent;
   border: none;
   border-radius: 5px;
@@ -801,11 +854,11 @@ small {
 }
 
 .btn-secondary {
-  background-color: #888;
+  background-color: #999999;
   color: #000;
 }
 .btn-secondary:hover {
-  background-color: #949494;
+  background-color: #a3a3a3;
 }
 
 .btn-danger {
@@ -817,11 +870,11 @@ small {
 }
 
 .btn-warning {
-  background-color: #ffd60a;
+  background-color: #ffee32;
   color: #000;
 }
 .btn-warning:hover {
-  background-color: #ffda23;
+  background-color: #fff047;
 }
 
 .btn-success {
@@ -906,11 +959,11 @@ small {
 }
 .menu.left {
   left: 0;
-  border-right: 1px solid #888;
+  border-right: 1px solid #999999;
 }
 .menu.right {
   right: 0;
-  border-left: 1px solid #888;
+  border-left: 1px solid #999999;
 }
 
 .menu-header {
