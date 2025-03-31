@@ -2,17 +2,34 @@
   "name": "equilibrium.js",
   "version": "0.5.0",
   "description": "Front-end framework",
-  "main": "dist/js/equilibrium.js",
-  "module": "dist/js/equilibrium.js",
-  "types": "dist/js/equilibrium.d.ts",
-  "style": "dist/css/equilibrium.css",
+  "type": "module",
+  "main": "dist/equilibrium.cjs",
+  "module": "dist/equilibrium.mjs",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/equilibrium.mjs",
+      "require": "./dist/equilibrium.cjs",
+      "default": "./dist/equilibrium.umd.js"
+    },
+    "./package.json": "./package.json",
+    "./style": "./dist/css/equilibrium.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run scss-compile && npm run js-compile",
-    "scss-compile": "sass src/scss:dist/css",
+    "build": "npm run clean && npm run build:js && npm run build:css",
+    "build:js": "rollup -c",
+    "build:css": "sass src/scss:dist/css",
+    "clean": "rimraf dist",
     "scss-docs": "sassdoc src/scss --dest docs/scss",
     "scss-watch": "sass --watch src/scss:dist/css",
-    "js-compile": "webpack --config webpack.config.js"
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch"
   },
   "repository": {
     "type": "git",
@@ -31,9 +48,20 @@
   "devDependencies": {
     "@babel/core": "^7.25.8",
     "@babel/preset-env": "^7.25.8",
+    "@babel/preset-typescript": "^7.26.0",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.13.10",
     "babel-loader": "^9.2.1",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.35.0",
+    "rollup-plugin-dts": "^6.1.1",
     "sass": "^1.77.3",
     "sassdoc": "^2.7.4",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4"
   }
