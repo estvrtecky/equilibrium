@@ -1,5 +1,5 @@
 // File: src/components/Menu.ts
-// Description: Menu component functionality with TypeScript support.
+// Description: Menu component functionality.
 
 interface MenuInstance {
   toggleSelector: string;
