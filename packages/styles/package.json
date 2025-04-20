@@ -1,0 +1,23 @@
+{
+  "name": "equilibrium-css",
+  "version": "1.0.0",
+  "description": "Equilibrium CSS styles",
+  "main": "index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./index.css": "./index.css",
+    "./index": "./index.css"
+  },
+  "files": [
+    "dist",
+    "index.css"
+  ],
+  "devDependencies": {
+    "postcss": "^8.5.3"
+  },
+  "peerDependencies": {
+    "postcss": "^8.5.3"
+  }
+}
