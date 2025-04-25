@@ -2,10 +2,13 @@
   "name": "equilibrium-css",
   "version": "1.0.0",
   "description": "Equilibrium CSS styles",
-  "main": "index.js",
-  "type": "commonjs",
+  "license": "MIT",
   "exports": {
-    ".": "./index.js",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
     "./package.json": "./package.json",
     "./index.css": "./index.css",
     "./index": "./index.css"
@@ -14,10 +17,15 @@
     "dist",
     "index.css"
   ],
-  "devDependencies": {
-    "postcss": "^8.5.3"
+  "scripts": {
+    "build": "npm run clean && tsup-node",
+    "clean": "rimraf dist",
+    "lint": "tsc --noEmit"
   },
-  "peerDependencies": {
+  "devDependencies": {
+    "tsup": "^8.4.0"
+  },
+  "dependencies": {
     "postcss": "^8.5.3"
   }
 }

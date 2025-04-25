@@ -6,7 +6,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspace equilibrium-js"
+    "build": "npm run build:core && npm run build:styles",
+    "build:core": "npm run build --workspace equilibrium-js",
+    "build:styles": "npm run build --workspace equilibrium-css"
   },
   "devDependencies": {
     "@types/node": "^22.14.1",
