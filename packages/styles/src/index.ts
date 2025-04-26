@@ -7,36 +7,35 @@ function equilibrium(opts: any): AcceptedPlugin {
     postcssPlugin: "equilibrium-css",
     Once(root) {
       console.log("Processing CSS with Equilibrium CSS...");
+
+      root.walkAtRules((atRule) => {
+        if (atRule.name === "equilibrium") {
+          if (atRule.params === "index") {
+            try {
+              const projectRoot = process.cwd();
+              const cssPath = path.join(
+                projectRoot,
+                "node_modules",
+                "equilibrium-css",
+                "index.css"
+              );
+
+              const cssContent = fs.readFileSync(cssPath, "utf-8");
+              const parsed = postcss.parse(cssContent, {
+                from: cssPath,
+              });
+
+              atRule.replaceWith(parsed.nodes);
+            } catch (err) {
+              console.error("[Equilibrium CSS] Error loading index.css:");
+              atRule.remove();
+            }
+          }
+        }
+      });
     },
     OnceExit(root) {
       console.log("Finished processing CSS with Equilibrium CSS.");
-    },
-    AtRule(atRule) {
-      if (atRule.name === "equilibrium") {
-        console.log("Processing Equilibrium at-rule:", atRule.params);
-        if (atRule.params === "index") {
-          try {
-            const projectRoot = process.cwd();
-            const cssPath = path.join(
-              projectRoot,
-              "node_modules",
-              "equilibrium-css",
-              "index.css"
-            );
-            console.log(cssPath);
-
-            const cssContent = fs.readFileSync(cssPath, "utf-8");
-            const parsed = postcss.parse(cssContent, {
-              from: cssPath,
-            });
-
-            atRule.replaceWith(parsed.nodes);
-          } catch (err) {
-            console.error("[Equilibrium CSS] Error loading index.css:");
-            atRule.remove();
-          }
-        }
-      }
     },
   };
 }
