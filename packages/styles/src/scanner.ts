@@ -1,26 +1,24 @@
 import path from "node:path";
-import { readdirSync, statSync } from "node:fs";
+import { glob } from "glob";
 
-export function scanProjectFiles(
-  directory: string,
-  filePattern: RegExp
-): string[] {
-  const results: string[] = [];
+export class Scanner {
+  constructor(private root: string) {}
 
-  function scanDir(dir: string) {
-    const entries = readdirSync(dir);
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry);
-      const stats = statSync(fullPath);
+  scan(content: string[]): string[] {
+    const results: string[] = [];
 
-      if (stats.isDirectory()) {
-        scanDir(fullPath);
-      } else if (filePattern.test(entry)) {
-        results.push(fullPath);
+    for (const pattern of content) {
+      if (typeof pattern === "string") {
+        const normalizedPattern = path.posix.join(
+          this.root.replace(/\\/g, "/"),
+          pattern.replace(/\\/g, "/")
+        );
+
+        const matchedFiles = glob.sync(normalizedPattern);
+        results.push(...matchedFiles);
       }
     }
-  }
 
-  scanDir(directory);
-  return results;
+    return results;
+  }
 }

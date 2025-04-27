@@ -2,19 +2,24 @@ import fs from "node:fs";
 import path from "node:path";
 import postcss, { type AcceptedPlugin, type PluginCreator } from "postcss";
 
-import { scanProjectFiles } from "./scanner";
+import { loadConfig } from "./config";
+import { Scanner } from "./scanner";
 
 function equilibrium(opts: any): AcceptedPlugin {
+  const projectRoot = process.cwd();
+  const scanner = new Scanner(projectRoot);
+
   return {
     postcssPlugin: "equilibrium-css",
     Once(root) {
       console.log("Processing CSS with Equilibrium CSS...");
 
+      const config = loadConfig();
+
       root.walkAtRules((atRule) => {
         if (atRule.name === "equilibrium") {
           if (atRule.params === "index") {
             try {
-              const projectRoot = process.cwd();
               const cssPath = path.join(
                 projectRoot,
                 "node_modules",
@@ -36,8 +41,7 @@ function equilibrium(opts: any): AcceptedPlugin {
         }
       });
 
-      const projectRoot = process.cwd() + "/src";
-      const allFiles = scanProjectFiles(projectRoot, /.*/);
+      const allFiles = scanner.scan(config.content);
       console.log("Found files:", allFiles);
     },
     OnceExit(root) {

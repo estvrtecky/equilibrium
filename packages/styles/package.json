@@ -23,6 +23,7 @@
     "lint": "tsc --noEmit"
   },
   "devDependencies": {
+    "glob": "^11.0.2",
     "tsup": "^8.4.0"
   },
   "dependencies": {
