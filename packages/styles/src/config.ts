@@ -18,6 +18,10 @@ export function loadConfig(): Config {
         const normalizedConfig = config.default || config;
 
         if (normalizedConfig && typeof normalizedConfig === "object") {
+          if (Object.keys(normalizedConfig).length === 0) {
+            return DEFAULT_CONFIG;
+          }
+
           return normalizedConfig as Config;
         }
       } catch (error) {
