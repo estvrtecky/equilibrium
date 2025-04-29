@@ -41,8 +41,9 @@ function equilibrium(opts: any): AcceptedPlugin {
         }
       });
 
-      const allFiles = scanner.scan(config.content);
-      console.log("Found files:", allFiles);
+      const allFiles = scanner.scanForFiles(config.content);
+      const allClasses = scanner.scanForClasses(allFiles);
+      console.log("Found classes:", allClasses);
     },
     OnceExit(root) {
       console.log("Finished processing CSS with Equilibrium CSS.");
