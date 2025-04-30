@@ -1,0 +1,7 @@
+// File: packages/styles/scss/base.scss
+// Description: Main SCSS file to reset and set base styles.
+
+@import "variables";
+@import "mixins/headings";
+@import "base/reset";
+@import "base/base";

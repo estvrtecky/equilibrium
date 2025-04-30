@@ -1,4 +1,5 @@
 @import "./theme.css";
+@import "./base.css";
 
 // Abstracts
 @import "functions";
@@ -7,14 +8,11 @@
 // Mixins
 @import "mixins/flex";
 @import "mixins/breakpoints";
-@import "mixins/headings";
 
 // Utilities
 @import "utilities/flex";
 
 // Base
-@import "base/reset";
-@import "base/base";
 @import "base/container";
 @import "base/grid";
 
