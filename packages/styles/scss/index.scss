@@ -1,23 +1,9 @@
 @import "./theme.css";
 @import "./base.css";
-
-// Abstracts
-@import "functions";
-@import "variables";
+@import "./components.css";
 
 // Mixins
 @import "mixins/flex";
-@import "mixins/breakpoints";
 
 // Utilities
 @import "utilities/flex";
-
-// Base
-@import "base/container";
-@import "base/grid";
-
-// Components
-@import "components/breadcrumb";
-@import "components/button";
-@import "components/navbar";
-@import "components/menu";
