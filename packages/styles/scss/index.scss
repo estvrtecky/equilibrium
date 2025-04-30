@@ -1,9 +1,7 @@
+// File: packages/styles/scss/index.scss
+// Description: Main SCSS file for Equilibrium CSS.
+
 @import "./theme.css";
 @import "./base.css";
 @import "./components.css";
-
-// Mixins
-@import "mixins/flex";
-
-// Utilities
-@import "utilities/flex";
+@import "./utilities.css";
