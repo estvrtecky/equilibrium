@@ -18,12 +18,14 @@
     "index.css"
   ],
   "scripts": {
-    "build": "npm run clean && tsup-node",
+    "build": "npm run clean && npm run build:scss && tsup-node",
+    "build:scss": "sass scss:. --no-source-map",
     "clean": "rimraf dist",
     "lint": "tsc --noEmit"
   },
   "devDependencies": {
     "glob": "^11.0.2",
+    "sass": "1.77.3",
     "tsup": "^8.4.0"
   },
   "dependencies": {
