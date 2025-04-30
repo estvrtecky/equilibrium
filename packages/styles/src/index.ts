@@ -7,6 +7,7 @@ import { Scanner } from "./scanner";
 
 function equilibrium(opts: any): AcceptedPlugin {
   const projectRoot = process.cwd();
+  const packagePath = path.join(projectRoot, "node_modules", "equilibrium-css");
   const scanner = new Scanner(projectRoot);
 
   return {
@@ -20,16 +21,26 @@ function equilibrium(opts: any): AcceptedPlugin {
         if (atRule.name === "equilibrium") {
           if (atRule.params === "index") {
             try {
-              const cssPath = path.join(
-                projectRoot,
-                "node_modules",
-                "equilibrium-css",
-                "index.css"
-              );
+              const cssPath = path.join(packagePath, "index.css");
 
               const cssContent = fs.readFileSync(cssPath, "utf-8");
               const parsed = postcss.parse(cssContent, {
                 from: cssPath,
+              });
+
+              // Resolve imports in index.css
+              parsed.walkAtRules((atRule) => {
+                if (atRule.name === "import") {
+                  const importPath = path.join(
+                    packagePath,
+                    atRule.params.replace(/['"]/g, "").trim()
+                  );
+                  const importContent = fs.readFileSync(importPath, "utf-8");
+                  const importParsed = postcss.parse(importContent, {
+                    from: importPath,
+                  });
+                  atRule.replaceWith(importParsed.nodes);
+                }
               });
 
               atRule.replaceWith(parsed.nodes);
