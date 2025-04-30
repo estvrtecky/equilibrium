@@ -1,10 +1,15 @@
 // File: packages/styles/scss/components.scss
 // Description: Main SCSS file for Equilibrium CSS components.
 
-@import "functions";
-@import "variables";
+// Abstracts
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+// Mixins
 @import "mixins/breakpoints";
 @import "mixins/flex";
+
+// Components
 @import "components/breadcrumb";
 @import "components/button";
 @import "components/container";
