@@ -28,7 +28,53 @@ function equilibrium(opts: any): AcceptedPlugin {
 
               atRule.replaceWith(parsed.nodes);
             } catch (err) {
-              console.error("[Equilibrium CSS] Error loading index.css:");
+              console.error("[Equilibrium CSS] Error loading index.css:", err);
+              atRule.remove();
+            }
+          } else if (atRule.params === "theme") {
+            try {
+              const themePath = path.join(packagePath, "theme.css");
+              const parsed = cssParser.parse(themePath);
+
+              atRule.replaceWith(parsed.nodes);
+            } catch (err) {
+              console.error("[Equilibrium CSS] Error loading theme.css:", err);
+              atRule.remove();
+            }
+          } else if (atRule.params === "base") {
+            try {
+              const basePath = path.join(packagePath, "base.css");
+              const parsed = cssParser.parse(basePath);
+
+              atRule.replaceWith(parsed.nodes);
+            } catch (err) {
+              console.error("[Equilibrium CSS] Error loading base.css:", err);
+              atRule.remove();
+            }
+          } else if (atRule.params === "components") {
+            try {
+              const componentsPath = path.join(packagePath, "components.css");
+              const parsed = cssParser.parse(componentsPath);
+
+              atRule.replaceWith(parsed.nodes);
+            } catch (err) {
+              console.error(
+                "[Equilibrium CSS] Error loading components.css:",
+                err
+              );
+              atRule.remove();
+            }
+          } else if (atRule.params === "utilities") {
+            try {
+              const utilitiesPath = path.join(packagePath, "utilities.css");
+              const parsed = cssParser.parse(utilitiesPath);
+
+              atRule.replaceWith(parsed.nodes);
+            } catch (err) {
+              console.error(
+                "[Equilibrium CSS] Error loading utilities.css:",
+                err
+              );
               atRule.remove();
             }
           }
