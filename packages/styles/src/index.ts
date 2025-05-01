@@ -19,6 +19,9 @@ function equilibrium(opts: any): AcceptedPlugin {
 
       const config = loadConfig();
 
+      const allFiles = scanner.scanForFiles(config.content);
+      const allClasses = scanner.scanForClasses(allFiles);
+
       root.walkAtRules((atRule) => {
         if (atRule.name === "equilibrium") {
           if (atRule.params === "index") {
@@ -54,7 +57,7 @@ function equilibrium(opts: any): AcceptedPlugin {
           } else if (atRule.params === "components") {
             try {
               const componentsPath = path.join(packagePath, "components.css");
-              const parsed = cssParser.parse(componentsPath);
+              const parsed = cssParser.parse(componentsPath, allClasses);
 
               atRule.replaceWith(parsed.nodes);
             } catch (err) {
@@ -67,7 +70,7 @@ function equilibrium(opts: any): AcceptedPlugin {
           } else if (atRule.params === "utilities") {
             try {
               const utilitiesPath = path.join(packagePath, "utilities.css");
-              const parsed = cssParser.parse(utilitiesPath);
+              const parsed = cssParser.parse(utilitiesPath, allClasses);
 
               atRule.replaceWith(parsed.nodes);
             } catch (err) {
@@ -80,10 +83,6 @@ function equilibrium(opts: any): AcceptedPlugin {
           }
         }
       });
-
-      const allFiles = scanner.scanForFiles(config.content);
-      const allClasses = scanner.scanForClasses(allFiles);
-      console.log("Found classes:", allClasses);
     },
     OnceExit(root) {
       console.log("Finished processing CSS with Equilibrium CSS.");

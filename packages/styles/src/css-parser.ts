@@ -5,7 +5,7 @@ import postcss from "postcss";
 export class CSSParser {
   constructor(private packagePath: string) {}
 
-  parse(cssFilePath: string): postcss.Root {
+  parse(cssFilePath: string, filterClasses?: string[]): postcss.Root {
     try {
       const cssContent = fs.readFileSync(cssFilePath, "utf-8");
       const parsed = postcss.parse(cssContent, {
@@ -26,6 +26,21 @@ export class CSSParser {
           atRule.replaceWith(importParsed.nodes);
         }
       });
+
+      // Handle filtering of unused classes
+      if (filterClasses) {
+        parsed.walkRules((rule) => {
+          const classNames = rule.selector.match(/\.[a-zA-Z0-9_-]+/g) || [];
+
+          const isClassUsed = classNames.some((className) => {
+            return filterClasses.includes(className.replace(".", ""));
+          });
+
+          if (!isClassUsed) {
+            rule.remove();
+          }
+        });
+      }
 
       return parsed;
     } catch (error) {
