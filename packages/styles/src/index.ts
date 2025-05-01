@@ -3,12 +3,14 @@ import path from "node:path";
 import postcss, { type AcceptedPlugin, type PluginCreator } from "postcss";
 
 import { loadConfig } from "./config";
+import { CSSParser } from "./css-parser";
 import { Scanner } from "./scanner";
 
 function equilibrium(opts: any): AcceptedPlugin {
   const projectRoot = process.cwd();
   const packagePath = path.join(projectRoot, "node_modules", "equilibrium-css");
   const scanner = new Scanner(projectRoot);
+  const cssParser = new CSSParser(packagePath);
 
   return {
     postcssPlugin: "equilibrium-css",
@@ -22,26 +24,7 @@ function equilibrium(opts: any): AcceptedPlugin {
           if (atRule.params === "index") {
             try {
               const cssPath = path.join(packagePath, "index.css");
-
-              const cssContent = fs.readFileSync(cssPath, "utf-8");
-              const parsed = postcss.parse(cssContent, {
-                from: cssPath,
-              });
-
-              // Resolve imports in index.css
-              parsed.walkAtRules((atRule) => {
-                if (atRule.name === "import") {
-                  const importPath = path.join(
-                    packagePath,
-                    atRule.params.replace(/['"]/g, "").trim()
-                  );
-                  const importContent = fs.readFileSync(importPath, "utf-8");
-                  const importParsed = postcss.parse(importContent, {
-                    from: importPath,
-                  });
-                  atRule.replaceWith(importParsed.nodes);
-                }
-              });
+              const parsed = cssParser.parse(cssPath);
 
               atRule.replaceWith(parsed.nodes);
             } catch (err) {
