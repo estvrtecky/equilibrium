@@ -14,12 +14,22 @@ function equilibrium(opts: any): AcceptedPlugin {
 
   return {
     postcssPlugin: "equilibrium-css",
-    Once(root) {
+    Once(root, { result }) {
       console.log("Processing CSS with Equilibrium CSS...");
 
       const config = loadConfig();
 
       const allFiles = scanner.scanForFiles(config.content);
+
+      for (const file of allFiles) {
+        result.messages.push({
+          type: "dependency",
+          plugin: "equilibrium-css",
+          file: file,
+          parent: result.opts.from,
+        });
+      }
+
       const allClasses = scanner.scanForClasses(allFiles);
 
       root.walkAtRules((atRule) => {
