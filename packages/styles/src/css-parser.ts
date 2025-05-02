@@ -42,6 +42,13 @@ export class CSSParser {
         });
       }
 
+      // Handle @media rules
+      parsed.walkAtRules((atRule) => {
+        if (atRule.nodes && atRule.nodes.length === 0) {
+          atRule.remove();
+        }
+      });
+
       return parsed;
     } catch (error) {
       console.error(`Error parsing CSS file at ${cssFilePath}:`, error);
