@@ -1,0 +1,52 @@
+{
+  "name": "equilibrium-js",
+  "version": "1.0.0",
+  "description": "Front-end framework",
+  "keywords": [
+    "components",
+    "js"
+  ],
+  "homepage": "https://equilibrium-docs.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estvrtecky/equilibrium.git"
+  },
+  "bugs": {
+    "url": "https://github.com/estvrtecky/equilibrium/issues"
+  },
+  "author": "Erik Štvrtecký",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/equilibrium.cjs",
+  "module": "dist/equilibrium.mjs",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/equilibrium.mjs",
+      "require": "./dist/equilibrium.cjs",
+      "default": "./dist/equilibrium.umd.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run clean && npm run build:js",
+    "build:js": "rollup -c",
+    "clean": "rimraf dist",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "rollup": "^4.35.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "ts-loader": "^9.5.2"
+  }
+}

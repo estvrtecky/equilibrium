@@ -1,0 +1,9 @@
+// File: packages/styles/scss/theme.scss
+// Description: Main SCSS file for Equilibrium CSS theme.
+
+// Abstracts
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+// Base
+@import "base/root";

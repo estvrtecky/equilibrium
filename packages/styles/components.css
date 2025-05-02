@@ -1,0 +1,159 @@
+.breadcrumb {
+  display: flex;
+}
+
+.breadcrumb-item:not(:first-child)::before {
+  content: "/";
+  margin: 0 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--eq-text-color);
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #1a1a1a;
+}
+
+.btn-secondary {
+  background-color: #999999;
+  color: #000;
+}
+.btn-secondary:hover {
+  background-color: #a3a3a3;
+}
+
+.btn-danger {
+  background-color: #e63946;
+  color: #000;
+}
+.btn-danger:hover {
+  background-color: #e94d59;
+}
+
+.btn-warning {
+  background-color: #ffee32;
+  color: #000;
+}
+.btn-warning:hover {
+  background-color: #fff047;
+}
+
+.btn-success {
+  background-color: #2dc653;
+  color: #000;
+}
+.btn-success:hover {
+  background-color: #42cc64;
+}
+
+.btn-info {
+  background-color: #00a8e8;
+  color: #000;
+}
+.btn-info:hover {
+  background-color: #1ab1ea;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  display: none;
+  height: 100%;
+  width: clamp(250px, 50%, 350px);
+  background-color: #fff;
+}
+.menu.show {
+  display: flex;
+  flex-direction: column;
+}
+.menu.left {
+  left: 0;
+  border-right: 1px solid #999999;
+}
+.menu.right {
+  right: 0;
+  border-left: 1px solid #999999;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.menu-main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar-logo {
+  display: flex;
+  font-size: 1.5rem;
+}
+@media (min-width: 992px) {
+  .navbar-logo {
+    flex: 1 1 0%;
+  }
+}
+
+.navbar-nav {
+  display: none;
+}
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.navbar-extras {
+  display: none;
+}
+@media (min-width: 992px) {
+  .navbar-extras {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 0%;
+  }
+}
+
+.navbar-menu-toggle {
+  display: flex;
+  border: none;
+  font-size: 1.25rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .navbar-menu-toggle {
+    display: none;
+  }
+}
