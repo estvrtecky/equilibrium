@@ -159,7 +159,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: var(--eq-navbar-padding-y) var(--eq-navbar-padding-x);
+  color: var(--eq-navbar-text-color);
+  background-color: var(--eq-navbar-bg-color);
 }
 
 .navbar-logo {

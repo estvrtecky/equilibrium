@@ -3,7 +3,9 @@
 
 .navbar {
   @include flex-container($justify: space-between, $align: center);
-  padding: $navbar-padding-y $navbar-padding-x;
+  padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+  color: var(--#{$prefix}navbar-text-color);
+  background-color: var(--#{$prefix}navbar-bg-color);
 }
 
 .navbar-logo {

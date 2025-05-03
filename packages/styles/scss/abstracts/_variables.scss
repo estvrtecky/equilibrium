@@ -238,9 +238,6 @@ $btn-padding-y: 0.5rem !default;
 $btn-padding-x: 1rem !default;
 
 // Navbar
-$navbar-padding-y: $spacing !default;
-$navbar-padding-x: $spacing * 2 !default;
-
 $logo-font-size: 1.5rem !default;
 
 $toggle-font-size: 1.25rem !default;
@@ -254,3 +251,7 @@ $menu-padding-x: $spacing * 2 !default;
 $menu-border-width: 1px !default;
 $menu-border-color: $gray-300 !default;
 $menu-border-color-dark: $gray-700 !default;
+
+// Navbar
+$navbar-padding-y: $spacing !default;
+$navbar-padding-x: $spacing * 2 !default;
