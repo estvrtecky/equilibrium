@@ -17,6 +17,15 @@
   // Headings
   --#{$prefix}headings-font-family: var(--#{$prefix}font-family-base);
   --#{$prefix}headings-color: var(--#{$prefix}text-color);
+
+  /* Menu */
+  --#{$prefix}menu-width: #{$menu-width};
+  --#{$prefix}menu-padding-y: #{$menu-padding-y};
+  --#{$prefix}menu-padding-x: #{$menu-padding-x};
+  --#{$prefix}menu-border-width: #{$menu-border-width};
+  --#{$prefix}menu-border-color: #{$menu-border-color};
+  --#{$prefix}menu-text-color: var(--#{$prefix}text-color);
+  --#{$prefix}menu-bg-color: var(--#{$prefix}bg-color);
 }
 
 // Dark mode colors
@@ -26,4 +35,9 @@
   --#{$prefix}text-color: #{$text-color-dark};
   --#{$prefix}bg-color: #{$bg-color-dark};
   --#{$prefix}headings-color: var(--#{$prefix}text-color);
+
+  /* Menu */
+  --#{$prefix}menu-border-color: #{$menu-border-color-dark};
+  --#{$prefix}menu-text-color: var(--#{$prefix}text-color);
+  --#{$prefix}menu-bg-color: var(--#{$prefix}bg-color);
 }
