@@ -1,0 +1,46 @@
+// File: src/scss/components/_navbar.scss
+// Description: Navigation bar component styles.
+
+.navbar {
+  @include flex-container($justify: space-between, $align: center);
+  padding: $navbar-padding-y $navbar-padding-x;
+}
+
+.navbar-logo {
+  @include flex-container;
+  font-size: $logo-font-size;
+
+  @include breakpoint(lg) {
+    flex: 1 1 0%;
+  }
+}
+
+.navbar-nav {
+  display: none;
+
+  @include breakpoint(lg) {
+    @include flex-container($align: center);
+    gap: $nav-gap;
+  }
+}
+
+.navbar-extras {
+  display: none;
+
+  @include breakpoint(lg) {
+    @include flex-container($justify: flex-end);
+    flex: 1 1 0%;
+  }
+}
+
+.navbar-menu-toggle {
+  @include flex-container;
+  border: none;
+  font-size: $toggle-font-size;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include breakpoint(lg) {
+    display: none;
+  }
+}

@@ -1,0 +1,78 @@
+// File: src/scss/utilities/_flex.scss
+// Description: Flexbox utility classes.
+
+.flex {
+  @include flex-container($is_component: false);
+}
+
+.flex-row {
+  @include flex-container($direction: row, $is_component: false);
+}
+
+.flex-row-reverse {
+  @include flex-container($direction: row-reverse, $is_component: false);
+}
+
+.flex-col {
+  @include flex-container($direction: column, $is_component: false);
+}
+
+.flex-col-reverse {
+  @include flex-container($direction: column-reverse, $is_component: false);
+}
+
+.flex-wrap {
+  @include flex-container($wrap: wrap, $is_component: false);
+}
+
+.flex-wrap-reverse {
+  @include flex-container($wrap: wrap-reverse, $is_component: false);
+}
+
+.flex-nowrap {
+  @include flex-container($wrap: nowrap, $is_component: false);
+}
+
+.justify-start {
+  @include flex-container($justify: flex-start, $is_component: false);
+}
+
+.justify-end {
+  @include flex-container($justify: flex-end, $is_component: false);
+}
+
+.justify-center {
+  @include flex-container($justify: center, $is_component: false);
+}
+
+.justify-between {
+  @include flex-container($justify: space-between, $is_component: false);
+}
+
+.justify-around {
+  @include flex-container($justify: space-around, $is_component: false);
+}
+
+.justify-evenly {
+  @include flex-container($justify: space-evenly, $is_component: false);
+}
+
+.align-start {
+  @include flex-container($align: flex-start, $is_component: false);
+}
+
+.align-end {
+  @include flex-container($align: flex-end, $is_component: false);
+}
+
+.align-center {
+  @include flex-container($align: center, $is_component: false);
+}
+
+.align-baseline {
+  @include flex-container($align: baseline, $is_component: false);
+}
+
+.align-stretch {
+  @include flex-container($align: stretch, $is_component: false);
+}

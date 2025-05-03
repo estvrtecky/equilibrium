@@ -1,18 +1,40 @@
 {
-  "name": "equilibrium",
-  "version": "1.0.0",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "name": "equilibrium.js",
+  "version": "0.5.0",
+  "description": "Front-end framework",
+  "main": "dist/js/equilibrium.js",
+  "module": "dist/js/equilibrium.js",
+  "types": "dist/js/equilibrium.d.ts",
+  "style": "dist/css/equilibrium.css",
   "scripts": {
-    "build": "npm run build:core && npm run build:styles",
-    "build:core": "npm run build --workspace equilibrium-js",
-    "build:styles": "npm run build --workspace equilibrium-css"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run scss-compile && npm run js-compile",
+    "scss-compile": "sass src/scss:dist/css",
+    "scss-docs": "sassdoc src/scss --dest docs/scss",
+    "scss-watch": "sass --watch src/scss:dist/css",
+    "js-compile": "webpack --config webpack.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estvrtecky/equilibrium.git"
+  },
+  "keywords": [
+    "scss",
+    "js"
+  ],
+  "author": "Erik Štvrtecký",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/estvrtecky/equilibrium/issues"
+  },
+  "homepage": "https://github.com/estvrtecky/equilibrium#readme",
   "devDependencies": {
-    "@types/node": "^22.14.1",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.8.2"
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "babel-loader": "^9.2.1",
+    "sass": "^1.77.3",
+    "sassdoc": "^2.7.4",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   }
 }

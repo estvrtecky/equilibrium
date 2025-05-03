@@ -1,0 +1,13 @@
+// File: src/scss/components/_breadcrumb.scss
+// Description: Breadcrumb component styles.
+
+.breadcrumb {
+  display: flex;
+}
+
+.breadcrumb-item {
+  &:not(:first-child)::before {
+    content: $breadcrumb-divider;
+    margin: 0 $breadcrumb-margin-x;
+  }
+}

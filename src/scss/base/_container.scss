@@ -1,0 +1,35 @@
+// File: src/scss/base/_container.scss
+// Description: Container styles.
+
+.container,
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $grid-gutter * 0.5;
+}
+
+@each $breakpoint, $container-width in $container-max-widths {
+  .container-#{$breakpoint} {
+    @extend .container-fluid;
+  }
+
+  @include breakpoint($breakpoint) {
+    %container-#{$breakpoint} {
+      max-width: $container-width;
+    }
+
+    $extend-container: true;
+
+    @each $name, $width in $breakpoints {
+      @if ($extend-container) {
+        .container#{breakpoint-infix($name)} {
+          @extend %container-#{$breakpoint};
+        }
+
+        @if ($name == $breakpoint) {
+          $extend-container: false;
+        }
+      }
+    }
+  }
+}
