@@ -1,0 +1,30 @@
+// File: packages/styles/scss/base/_reset.scss
+// Description: This file is used to reset the default browser styles.
+
+/* Set up a box model on the root element */
+html {
+  box-sizing: border-box;
+}
+
+/*
+  1. Make all elements inherit the box-sizing property
+  2. Remove default margin and padding
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
+}
+
+/* Remove default list styles */
+li {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
