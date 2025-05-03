@@ -9,8 +9,10 @@
 }
 
 .navbar-logo {
-  @include flex-container;
-  font-size: $logo-font-size;
+  @include flex-container($align: center);
+  gap: var(--#{$prefix}navbar-logo-gap);
+  font-size: var(--#{$prefix}navbar-logo-font-size);
+  color: var(--#{$prefix}navbar-logo-color);
 
   @include breakpoint(lg) {
     flex: 1 1 0%;

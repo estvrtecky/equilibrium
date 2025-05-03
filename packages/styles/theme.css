@@ -23,6 +23,9 @@
   --eq-navbar-padding-x: 2rem;
   --eq-navbar-text-color: var(--eq-text-color);
   --eq-navbar-bg-color: var(--eq-bg-color);
+  --eq-navbar-logo-gap: 1rem;
+  --eq-navbar-logo-font-size: 1.5rem;
+  --eq-navbar-logo-color: var(--eq-text-color);
 }
 
 [data-eq-theme=dark] {
@@ -37,4 +40,5 @@
   /* Navbar */
   --eq-navbar-text-color: var(--eq-text-color);
   --eq-navbar-bg-color: var(--eq-bg-color);
+  --eq-navbar-logo-color: var(--eq-text-color);
 }

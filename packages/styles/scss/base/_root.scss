@@ -32,6 +32,9 @@
   --#{$prefix}navbar-padding-x: #{$navbar-padding-x};
   --#{$prefix}navbar-text-color: var(--#{$prefix}text-color);
   --#{$prefix}navbar-bg-color: var(--#{$prefix}bg-color);
+  --#{$prefix}navbar-logo-gap: #{$navbar-logo-gap};
+  --#{$prefix}navbar-logo-font-size: #{$navbar-logo-font-size};
+  --#{$prefix}navbar-logo-color: var(--#{$prefix}text-color);
 }
 
 // Dark mode colors
@@ -50,4 +53,5 @@
   /* Navbar */
   --#{$prefix}navbar-text-color: var(--#{$prefix}text-color);
   --#{$prefix}navbar-bg-color: var(--#{$prefix}bg-color);
+  --#{$prefix}navbar-logo-color: var(--#{$prefix}text-color);
 }
