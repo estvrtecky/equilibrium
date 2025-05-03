@@ -3,33 +3,83 @@
 
 .menu {
   position: fixed;
-  top: 0;
   display: none;
   height: 100%;
-  width: clamp(250px, 50%, 350px);
-  background-color: $white;
+  width: 100%;
+  padding: var(--#{$prefix}menu-padding-y) var(--#{$prefix}menu-padding-x);
+  color: var(--#{$prefix}menu-text-color);
+  background-color: var(--#{$prefix}menu-bg-color);
+
+  @include breakpoint(sm) {
+    width: var(--#{$prefix}menu-width);
+  }
 
   &.show {
     @include flex-container($direction: column);
+    gap: var(--#{$prefix}menu-padding-y);
   }
 
-  &.left {
+  &.menu-left {
+    top: 0;
     left: 0;
-    border-right: 1px solid $gray-500;
+
+    @include breakpoint(sm) {
+      border-right: var(--#{$prefix}menu-border-width) solid
+        var(--#{$prefix}menu-border-color);
+    }
   }
 
-  &.right {
+  &.menu-right {
+    top: 0;
     right: 0;
-    border-left: 1px solid $gray-500;
+
+    @include breakpoint(sm) {
+      border-left: var(--#{$prefix}menu-border-width) solid
+        var(--#{$prefix}menu-border-color);
+    }
+  }
+
+  &.menu-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(sm) {
+      border-bottom: var(--#{$prefix}menu-border-width) solid
+        var(--#{$prefix}menu-border-color);
+    }
+  }
+
+  &.menu-bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(sm) {
+      border-top: var(--#{$prefix}menu-border-width) solid
+        var(--#{$prefix}menu-border-color);
+    }
   }
 }
 
 .menu-header {
   @include flex-container($justify: space-between, $align: center);
-  padding: $spacing;
+
+  .menu-close {
+    margin-right: calc(-1 * $btn-padding-x);
+  }
 }
 
 .menu-main {
   @include flex-container($direction: column);
-  padding: $spacing;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.menu-footer {
+  @include flex-container($direction: column);
 }

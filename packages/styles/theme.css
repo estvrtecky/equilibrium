@@ -10,6 +10,14 @@
   --eq-bg-color: #fff;
   --eq-headings-font-family: var(--eq-font-family-base);
   --eq-headings-color: var(--eq-text-color);
+  /* Menu */
+  --eq-menu-width: 350px;
+  --eq-menu-padding-y: 1rem;
+  --eq-menu-padding-x: 2rem;
+  --eq-menu-border-width: 1px;
+  --eq-menu-border-color: #bfbfbf;
+  --eq-menu-text-color: var(--eq-text-color);
+  --eq-menu-bg-color: var(--eq-bg-color);
 }
 
 [data-eq-theme=dark] {
@@ -17,4 +25,8 @@
   --eq-text-color: #fff;
   --eq-bg-color: #171717;
   --eq-headings-color: var(--eq-text-color);
+  /* Menu */
+  --eq-menu-border-color: #4d4d4d;
+  --eq-menu-text-color: var(--eq-text-color);
+  --eq-menu-bg-color: var(--eq-bg-color);
 }
