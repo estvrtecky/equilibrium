@@ -24,7 +24,7 @@
 
   @include breakpoint(lg) {
     @include flex-container($align: center);
-    gap: $nav-gap;
+    gap: var(--#{$prefix}navbar-nav-gap);
   }
 }
 
@@ -37,11 +37,8 @@
   }
 }
 
-.navbar-menu-toggle {
-  @include flex-container;
-  border: none;
-  font-size: $toggle-font-size;
-  background-color: transparent;
+.navbar-toggle {
+  margin-right: calc(-1 * $btn-padding-x);
   cursor: pointer;
 
   @include breakpoint(lg) {

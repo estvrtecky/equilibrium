@@ -184,7 +184,7 @@
   .navbar-nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: var(--eq-navbar-nav-gap);
   }
 }
 
@@ -199,15 +199,12 @@
   }
 }
 
-.navbar-menu-toggle {
-  display: flex;
-  border: none;
-  font-size: 1.25rem;
-  background-color: transparent;
+.navbar-toggle {
+  margin-right: -1rem;
   cursor: pointer;
 }
 @media (min-width: 992px) {
-  .navbar-menu-toggle {
+  .navbar-toggle {
     display: none;
   }
 }
