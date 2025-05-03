@@ -18,6 +18,15 @@
   --eq-menu-border-color: #bfbfbf;
   --eq-menu-text-color: var(--eq-text-color);
   --eq-menu-bg-color: var(--eq-bg-color);
+  /* Navbar */
+  --eq-navbar-padding-y: 1rem;
+  --eq-navbar-padding-x: 2rem;
+  --eq-navbar-text-color: var(--eq-text-color);
+  --eq-navbar-bg-color: var(--eq-bg-color);
+  --eq-navbar-logo-gap: 1rem;
+  --eq-navbar-logo-font-size: 1.5rem;
+  --eq-navbar-logo-color: var(--eq-text-color);
+  --eq-navbar-nav-gap: 1.5rem;
 }
 
 [data-eq-theme=dark] {
@@ -29,4 +38,8 @@
   --eq-menu-border-color: #4d4d4d;
   --eq-menu-text-color: var(--eq-text-color);
   --eq-menu-bg-color: var(--eq-bg-color);
+  /* Navbar */
+  --eq-navbar-text-color: var(--eq-text-color);
+  --eq-navbar-bg-color: var(--eq-bg-color);
+  --eq-navbar-logo-color: var(--eq-text-color);
 }

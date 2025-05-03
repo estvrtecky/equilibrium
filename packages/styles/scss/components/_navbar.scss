@@ -3,12 +3,16 @@
 
 .navbar {
   @include flex-container($justify: space-between, $align: center);
-  padding: $navbar-padding-y $navbar-padding-x;
+  padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+  color: var(--#{$prefix}navbar-text-color);
+  background-color: var(--#{$prefix}navbar-bg-color);
 }
 
 .navbar-logo {
-  @include flex-container;
-  font-size: $logo-font-size;
+  @include flex-container($align: center);
+  gap: var(--#{$prefix}navbar-logo-gap);
+  font-size: var(--#{$prefix}navbar-logo-font-size);
+  color: var(--#{$prefix}navbar-logo-color);
 
   @include breakpoint(lg) {
     flex: 1 1 0%;
@@ -20,7 +24,7 @@
 
   @include breakpoint(lg) {
     @include flex-container($align: center);
-    gap: $nav-gap;
+    gap: var(--#{$prefix}navbar-nav-gap);
   }
 }
 
@@ -33,11 +37,8 @@
   }
 }
 
-.navbar-menu-toggle {
-  @include flex-container;
-  border: none;
-  font-size: $toggle-font-size;
-  background-color: transparent;
+.navbar-toggle {
+  margin-right: calc(-1 * $btn-padding-x);
   cursor: pointer;
 
   @include breakpoint(lg) {
